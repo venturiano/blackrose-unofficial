@@ -1,0 +1,16 @@
+mkdir venv
+python3 -m venv venv/
+
+pip3 install django
+pip3 install djangorestframework
+pip3 install psycopg2
+
+# db config (postgres)
+as postgres user:
+createdb blackrose
+psql
+CREATE USER blackrose WITH password '...';
+GRANT ALL PRIVILEGES ON DATABASE blackrose TO blackrose;
+
+in venv:
+python manage.py migrate
