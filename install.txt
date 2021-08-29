@@ -4,6 +4,7 @@ python3 -m venv venv/
 pip3 install django
 pip3 install djangorestframework
 pip3 install psycopg2
+pip3 install fontawesome-free
 
 # db config (postgres)
 as postgres user:

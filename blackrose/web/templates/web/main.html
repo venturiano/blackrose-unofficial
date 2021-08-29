@@ -1,0 +1,40 @@
+{% extends "web/base.html" %}
+
+{% block scripts %}
+    {% load static %} 
+    <script src="{%static 'web/main.js' %}"></script>
+    <script src="{%static 'web/rot.min.js' %}"></script>
+{% endblock %}
+
+
+{% block content %}
+<div id="maingrid" class="main-grid-container">
+    <div class="ui-section">Info varie/spazio bottoni extra</div>
+    <div class="center-container">
+        <div class="center-left-container">
+            <div class="trackers-container">
+                <div class="ui-section">Tracker Black Rose</div>
+                {% for i in players_range %}
+                    <div class="player-container">
+                        <div class="ui-section" id="player-color-{{i}}"></div>
+                        <div class="player-left-container">
+                            <div class="ui-section" id="player-name-{{i}}"></div>
+                            <div class="ui-section" id="character-name-{{i}}"></div>
+                        </div>
+                        <div class="damage-container" id="damage-{{i}}"></div>
+                        <div class="ui-section" id="points-{{i}}"></div>
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="ui-section">
+                Mazzetti librerie + quest
+            </div>
+        </div>
+        <div class="ui-section" id="hex-section" data-spacing=3></div>
+    </div>
+    <div class="bottom-container">
+        <div class="ui-section">Plancia giocatore</div>
+        <div class="ui-section">Tracker eventi</div>
+    </div>
+</div>
+{% endblock %}

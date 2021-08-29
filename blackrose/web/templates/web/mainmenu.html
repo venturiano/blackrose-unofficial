@@ -1,0 +1,14 @@
+{% extends "web/base.html" %}
+
+{% block scripts %}
+{% endblock %}
+
+
+{% block content %}
+<form action="{% url 'web:creategameview' %}">
+    <button type="submit" value="new">New Game</button>
+</form>
+
+
+</div>
+{% endblock %}

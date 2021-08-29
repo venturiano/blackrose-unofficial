@@ -1,0 +1,18 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    {% load static %} 
+    <link rel="stylesheet" href="{%static 'web/main.css' %}">
+    <script src="{%static 'web/jquery-3.1.1.min.js' %}"></script>
+    <script src="{% static 'fontawesome_free/js/all.min.js' %}"></script>
+    {% block scripts %}{% endblock %}
+</head>
+
+<body>
+
+<div>
+    {% block content %}{% endblock %}
+</div>
+
+</body>
+
